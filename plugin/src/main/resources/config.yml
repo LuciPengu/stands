@@ -1,0 +1,290 @@
+# Stands — config. Damage in HP (2 HP = 1 heart). Cooldowns in seconds.
+# Edit, then /stand reload. See BALANCE.md for the reasoning behind each number.
+
+# Stands the random Stand Arrow can give. Add more here as they get ported.
+enabled-stands: [theworld, starplatinum, crazydiamond, stickyfingers, kingcrimson, silverchariot, magiciansred, heirophantgreen, aerosmith, tuskact4, theemperor, weatherreport, killerqueen, thehand, purplehaze, echoesact3, metallica, hermitpurple, anubis, goldenexperience, d4c]
+# 'ger' (Gold Experience Requiem) is not in the arrow pool: use a Stand Arrow with a level 3 Gold Experience.
+
+arrow:
+  fail-chance: 0.10      # chance the arrow "rejects" you
+  fail-damage: 30.0      # original mod: 30 (lethal). Lower for friendlier servers.
+  craftable: true
+
+# Stands level up two ways: stand XP earned by fighting, or paying vanilla XP levels with /stand levelup.
+levels:
+  level-2-xp: 300        # total stand XP to reach level 2 (unlocks skill 2)
+  level-3-xp: 1000       # total stand XP to reach level 3 (unlocks the ultimate)
+  level-2-cost: 30       # vanilla XP levels for /stand levelup
+  level-3-cost: 60
+
+xp:
+  per-damage-vs-mobs: 1.0      # stand XP per point of base ability damage
+  per-damage-vs-players: 3.0
+  mob-kill: 8
+  player-kill: 60
+  duel-win: 150
+  duel-loss: 30
+
+pvp:
+  default-on: false      # new players start with stand PvP off; /stand pvp toggles it
+  duel-countdown: 5      # seconds
+  duel-time-limit: 180   # seconds, then it's a draw
+
+# Block-changing powers (zippers, fire, erase): 'temporary' restores the blocks after a few seconds, 'off' = damage only.
+world-edits: temporary
+
+# Who you hit decides how stand damage works.
+#  - Stand users: TRUE damage (ignores armor + Protection) so stand PvP is skill/stand-based, not gear-based.
+#  - Players without a stand and mobs: big multipliers, armor applies normally. It should feel unfair.
+power:
+  vs-stand-users: 1.0          # x base damage, ignores armor
+  vs-players-without-stand: 3.0
+  vs-mobs: 4.0
+  cooldown-multiplier: 0.7     # every stand's cooldowns x this (lower = spammier)
+
+# Resource pack hosting (sounds + stand models). Players download it on join.
+pack:
+  enabled: true
+  port: 8765
+  public-url: "http://localhost:8765"   # change to your tunnel/public address for friends
+  required: false
+
+# Sound ids live here so you can swap them without touching code.
+sounds:
+  volume: 3.0
+  summon: "jojo:summonstand"
+  unsummon: "jojo:unsummonstand"
+  timestop: "jojo:timestop"
+  theworld-rush: "jojo:theworldrush"
+  roadroller: "jojo:roadroller"
+  ora: "jojo:ora"
+  starplatinum-rush: "jojo:starplatrush"
+  crazydiamond-rush: "jojo:crazydiamonddora"
+  reverse: "jojo:reverse"
+  ari: "jojo:ari"
+  zipper-place: "jojo:zipperplace"
+  zipper-zip: "jojo:zipperzip"
+  crimson-jab: "jojo:crimsonjab"
+  time-skip: "jojo:quicktimeerase"
+  time-erase: "jojo:conscious_time_erasure"
+  chariot-slash: "jojo:chariotslash"
+  armor-off: "minecraft:block.anvil.use"
+  fire: "minecraft:entity.blaze.shoot"
+  emerald-splash: "jojo:emeraldsplash"
+  web: "jojo:webplacement"
+  minigun: "jojo:areosmithminigun"
+  sonar: "jojo:aerosmithsonar"
+  bomb: "jojo:killerqueenremotedetonation"
+  tusk: "jojo:tuskora"
+  gun: "jojo:emperorgunsfx"
+  detonate: "jojo:killerqueenremotedetonation"
+  bites-the-dust: "jojo:bitesthedusttimereverse"
+  hand-erase: "jojo:handerase"
+  hand-teleport: "jojo:handteleport"
+  virus-punch: "jojo:viruspunch"
+  rage: "jojo:rage"
+  ultimate-virus: "jojo:ultimatevirus"
+  echoes: "jojo:echoeseffect"
+  ge-rush: "jojo:goldexperiencerush"
+  life: "jojo:goldenexperiencelifegiver"
+  ger: "jojo:geractivation"
+  dojyaan: "jojo:dojyann"
+
+time-stop:
+  radius: 30
+  stored-damage-cap: 16.0   # vs STAND USERS only: max damage per victim during + 1s after the stop (no cap vs everyone else)
+  counter-after: 1.0        # other time-stop users can move after this many seconds
+
+stands:
+  theworld:
+    name: "The World"
+    model: theworld
+    basic:      # MUDA rush — last hit is a launcher
+      cooldown: 4
+      damage-total: 9.0
+      hits: 8
+      range: 4.0
+      finisher-knockback: 1.6
+    skill:      # throwing knives
+      cooldown: 12
+      knives: 5
+      damage-per-knife: 4.0
+    skill2:     # dash (becomes ROAD ROLLER during your time stop)
+      cooldown: 10
+      distance: 5
+      level: 2
+    ultimate:   # ZA WARUDO
+      cooldown: 75
+      duration: 5.0
+      level: 3
+    roadroller:
+      cooldown: 120
+      damage: 14.0
+      radius: 4.5
+
+  starplatinum:   # hardest rush in the game, shorter time stop than The World
+    name: "Star Platinum"
+    model: starplatinum
+    basic:    { cooldown: 4, damage-total: 10.5, hits: 8, range: 4.0, finisher-knockback: 1.8 }
+    skill:    { cooldown: 8, damage: 6.0, range: 7 }            # Star Finger
+    skill2:   { cooldown: 10, damage: 5.0, knockback: 1.4, level: 2 }   # block throw
+    ultimate: { cooldown: 75, duration: 3.5, level: 3 }
+
+  crazydiamond:   # brawler that heals
+    name: "Crazy Diamond"
+    model: crazydiamond
+    basic:    { cooldown: 4, damage-total: 9.5, hits: 8, range: 4.0, finisher-knockback: 1.6 }
+    skill:    { cooldown: 20, instant-heal: 3.0, regen-seconds: 3 }
+    skill2:   { cooldown: 30, level: 2 }                        # repair every damaged item you carry
+    ultimate: { cooldown: 75, heal: 12.0, radius: 6, level: 3 }
+
+  stickyfingers:  # mobility + traps
+    name: "Sticky Fingers"
+    model: stickyfingers
+    basic:    { cooldown: 4, damage-total: 9.0, hits: 8, range: 4.0, finisher-knockback: 1.6 }
+    skill:    { cooldown: 10, distance: 7 }                     # zip through walls
+    skill2:   { cooldown: 15, damage: 6.0, slow-seconds: 2, range: 8, lifetime: 12, level: 2 }
+    ultimate: { cooldown: 75, duration: 3, heal: 6.0, level: 3 }
+
+  kingcrimson:    # one big punch, time tricks instead of a freeze
+    name: "King Crimson"
+    model: kingcrimson
+    basic:    { cooldown: 4, damage-total: 8.5, hits: 7, range: 4.0, finisher-knockback: 1.4 }
+    skill:    { cooldown: 12, damage: 10.0, range: 3.5, knockback: 1.2, windup: 0.4 }   # jab (dodgeable wind-up)
+    skill2:   { cooldown: 10, distance: 9, level: 2 }           # time skip
+    ultimate: { cooldown: 70, duration: 4, epitaph-bonus: 6.0, radius: 20, level: 3 }   # time erase
+
+  silverchariot:  # fastest stand, glass-cannon ultimate
+    name: "Silver Chariot"
+    model: silverchariot
+    basic:    { cooldown: 3, damage: 6.0, range: 3.5, distance: 4 }     # lunge
+    skill:    { cooldown: 6, damage-total: 8.0, hits: 6, range: 4.5, finisher-knockback: 1.0 }
+    skill2:   { cooldown: 14, damage: 8.0, knockback: 1.0, level: 2 }   # sword tip
+    ultimate: { cooldown: 60, duration: 8, damage-taken-multiplier: 1.2, level: 3 }
+
+  # ---------------- ranged ----------------
+  magiciansred:
+    name: "Magician's Red"
+    model: magiciansred
+    basic:    { cooldown: 3, damage: 5.0, burn-seconds: 3 }
+    skill:    { cooldown: 12, damage-per-tick: 1.5, radius: 2.5, duration: 4, range: 7 }   # flame wall, ticks twice a second
+    skill2:   { cooldown: 20, duration: 6, next-hit-bonus: 4.0, level: 2 }
+    ultimate: { cooldown: 75, fireballs: 5, damage: 4.0, level: 3 }
+
+  heirophantgreen:
+    name: "Hierophant Green"
+    model: heirophantgreen
+    basic:    { cooldown: 5, emeralds: 4, damage-per-emerald: 2.0 }
+    skill:    { cooldown: 14, duration: 5 }                      # cobwebs
+    skill2:   { cooldown: 16, damage: 2.0, root-seconds: 1.5, range: 12, level: 2 }
+    ultimate: { cooldown: 75, waves: 2, emeralds-per-wave: 8, damage-per-emerald: 2.0, level: 3 }
+
+  aerosmith:
+    name: "Aerosmith"
+    model: aerosmith
+    basic:    { cooldown: 5, shots: 8, damage-per-shot: 1.0 }
+    skill:    { cooldown: 12, damage: 7.0, radius: 3 }
+    skill2:   { cooldown: 25, radius: 30, duration: 6, level: 2 }
+    ultimate: { cooldown: 75, blasts: 8, damage-per-blast: 3.0, level: 3 }
+
+  tuskact4:
+    name: "Tusk Act 4"
+    model: tuskact4
+    basic:    { cooldown: 2.5, damage: 4.0 }
+    skill:    { cooldown: 12, nails: 5, damage-per-nail: 3.0 }
+    skill2:   { cooldown: 15, damage: 7.0, spin-seconds: 2, level: 2 }
+    ultimate: { cooldown: 100, damage: 4.0, duration: 6, damage-per-second: 1.5, level: 3 }
+
+  theemperor:
+    name: "The Emperor"
+    basic:    { cooldown: 1.2, damage: 4.0, range: 40 }
+    skill:    { cooldown: 6, damage: 6.0, homing-range: 8 }
+    skill2:   { cooldown: 8, distance: 6, level: 2 }
+    ultimate: { cooldown: 75, shots: 6, damage-per-shot: 3.0, range: 40, level: 3 }
+
+  weatherreport:
+    name: "Weather Report"
+    model: weatherreport
+    basic:    { cooldown: 6, damage: 5.0, range: 20, radius: 2 }
+    skill:    { cooldown: 15, duration: 5 }
+    skill2:   { cooldown: 10, damage: 2.0, knockback: 1.8, range: 7, level: 2 }
+    ultimate: { cooldown: 80, damage: 4.0, radius: 10, duration: 4, level: 3 }
+
+  # ---------------- control ----------------
+  killerqueen:
+    name: "Killer Queen"
+    model: killerqueen
+    basic:    { cooldown: 2.5, damage: 6.0, range: 3.5 }
+    skill:    { cooldown: 10, damage: 8.0, radius: 3, plant-range: 5, fuse-seconds: 20 }   # cooldown starts on detonation
+    skill2:   { cooldown: 20, damage: 6.0, radius: 2.5, homing-range: 12, level: 2 }
+    ultimate: { cooldown: 180, health-threshold: 8.0, heal-to: 14.0, level: 3 }
+
+  thehand:
+    name: "The Hand"
+    model: thehand
+    basic:    { cooldown: 2.5, damage: 6.0, range: 3.5 }
+    skill:    { cooldown: 10, range: 10, self-distance: 5 }
+    skill2:   { cooldown: 8, range: 5, restore-seconds: 5, level: 2 }
+    ultimate: { cooldown: 80, damage: 12.0, range: 4, windup: 0.5, level: 3 }
+
+  purplehaze:
+    name: "Purple Haze"
+    model: purplehaze
+    basic:    { cooldown: 5, damage: 5.0, range: 3.5, poison-seconds: 4, rage-cooldown: 1 }
+    skill:    { cooldown: 45, duration: 8 }
+    skill2:   { cooldown: 18, radius: 3, cloud-seconds: 4, level: 2 }
+    ultimate: { cooldown: 90, damage: 4.0, radius: 5, duration: 5, self-wither-seconds: 3, level: 3 }
+
+  echoesact3:
+    name: "Echoes Act 3"
+    model: echoesact3
+    basic:    { cooldown: 2.5, damage: 5.0, range: 3.5 }
+    skill:    { cooldown: 6, damage: 3.0, burn-seconds: 4, range: 8 }
+    skill2:   { cooldown: 8, damage: 2.0, knockback: 1.5, range: 6, level: 2 }
+    ultimate: { cooldown: 60, damage: 4.0, duration: 3, range: 10, level: 3 }
+
+  metallica:
+    name: "Metallica"
+    basic:    { cooldown: 4, damage: 5.0, range: 6 }
+    skill:    { cooldown: 15, damage-per-second: 1.0, seconds: 5, range: 8 }
+    skill2:   { cooldown: 20, damage: 2.0, range: 10, level: 2 }
+    ultimate: { cooldown: 60, duration: 5, level: 3 }
+
+  hermitpurple:
+    name: "Hermit Purple"
+    basic:    { cooldown: 3, damage: 6.0, range: 5 }
+    skill:    { cooldown: 10, range: 14, speed: 1.5 }
+    skill2:   { cooldown: 14, damage: 3.0, root-seconds: 2, range: 8, lifetime: 12, level: 2 }
+    ultimate: { cooldown: 75, heal: 4.0, duration: 8, level: 3 }
+
+  anubis:
+    name: "Anubis"
+    basic:    { cooldown: 1.5, damage: 5.0, range: 3.5, damage-per-stack: 1.0, max-stacks: 4 }
+    skill:    { cooldown: 15, duration: 5 }
+    skill2:   { cooldown: 8, damage: 5.0, distance: 5, level: 2 }
+    ultimate: { cooldown: 60, damage: 9.0, distance: 8, level: 3 }
+
+  # ---------------- special ----------------
+  goldenexperience:
+    name: "Gold Experience"
+    model: goldenexperience
+    basic:    { cooldown: 4, damage-total: 8.0, hits: 8, range: 4.0, finisher-knockback: 1.4 }
+    skill:    { cooldown: 15, lifetime: 8 }
+    skill2:   { cooldown: 20, duration: 6, next-hit-bonus: 3.0, level: 2 }
+    ultimate: { cooldown: 60, radius: 40, duration: 8, level: 3 }
+
+  ger:
+    name: "Gold Experience Requiem"
+    model: ger
+    basic:    { cooldown: 4, damage-total: 10.0, hits: 8, range: 4.0, finisher-knockback: 1.6 }
+    skill:    { cooldown: 12, lifetime: 10 }
+    skill2:   { cooldown: 18, duration: 6, next-hit-bonus: 4.0, level: 2 }
+    ultimate: { cooldown: 120, window: 5, heal: 6.0, reflect-damage: 8.0, level: 3 }
+
+  d4c:
+    name: "D4C"
+    model: d4c
+    basic:    { cooldown: 2.5, damage: 6.0, range: 3.5 }
+    skill:    { cooldown: 20, distance: 8, duration: 1.5 }
+    skill2:   { cooldown: 25, duration: 6, level: 2 }
+    ultimate: { cooldown: 100, duration: 5, damage-taken-multiplier: 0.5, level: 3 }

@@ -1,0 +1,13 @@
+name: Stands
+version: '${version}'
+main: dev.luci.stands.StandsPlugin
+api-version: '26.3'
+depend: [BetterModel]
+description: JoJo-style stands with PvP-balanced abilities.
+commands:
+  stand:
+    description: Stand commands
+    usage: /stand help
+permissions:
+  stands.admin:
+    default: op

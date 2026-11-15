@@ -1,0 +1,11 @@
+server/
+download/
+extracted/
+decompiled/
+tools/gradle/
+tools/bmapi/
+tools/*.jar
+plugin/build/
+plugin/.gradle/
+release/
+.DS_Store
