@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "stands",
+  "version": "${version}",
+  "name": "Stands",
+  "description": "JoJo-style stands: 22 stands with animated models, four abilities each, time stop, duels and leveling.",
+  "authors": [
+    "HueroTaquero"
+  ],
+  "license": "All-Rights-Reserved",
+  "icon": "assets/stands/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.luci.stands.StandsMod"
+    ],
+    "client": [
+      "dev.luci.stands.client.StandsClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "geckolib": ">=5.5.7"
+  },
+  "mixins": [
+    "stands.mixins.json"
+  ]
+}

@@ -1,0 +1,71 @@
+package dev.luci.stands;
+
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.entity.monster.zombie.Zombie;
+import net.minecraft.world.phys.Vec3;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/** Dev only (-Dstands.selftest=true): cycles every stand and ability on the first player to join, logging failures. */
+public final class SelfTest {
+    private SelfTest() { }
+
+    /** Set when the run finishes; the dev client closes itself on it. */
+    public static volatile boolean done;
+
+    static void init() {
+        if (!Boolean.getBoolean("stands.selftest")) return;
+        ServerPlayConnectionEvents.JOIN.register((h, s, server) -> Sched.later(100, () -> run(h.getPlayer())));
+    }
+
+    private static void run(ServerPlayer p) {
+        StandManager sm = StandsMod.stands();
+        p.getAbilities().invulnerable = true;
+        p.onUpdateAbilities();
+        sm.toggleTestMode(p);
+        List<String> ids = new ArrayList<>(sm.knownStands());
+        String only = System.getProperty("stands.selftest.only");
+        if (only != null) ids.retainAll(List.of(only.split(",")));
+        long t = 0;
+        for (String id : ids) {
+            final long base = t;
+            Sched.later(base + 1, () -> {
+                targets(p);
+                sm.setStand(p, id);
+                sm.setLevel(p, 3);
+                sm.summon(p);
+                StandsMod.LOG.info("SELFTEST {} summoned (model={})", id, sm.standEntity(p) != null);
+            });
+            for (StandManager.Slot slot : StandManager.Slot.values()) {
+                Sched.later(base + 20 + slot.ordinal() * 30L, () -> {
+                    sm.clearCooldowns(p);
+                    try { sm.use(p, slot); StandsMod.LOG.info("SELFTEST {} {} OK", id, slot); }
+                    catch (Throwable ex) { StandsMod.LOG.error("SELFTEST {} {} FAIL", id, slot, ex); }
+                });
+            }
+            Sched.later(base + 150, () -> { StandsMod.timeStop().endAll(); sm.unsummon(p, false); });
+            t += 160;
+        }
+        Sched.later(t + 20, () -> { StandsMod.LOG.info("SELFTEST DONE"); done = true; });
+    }
+
+    private static void targets(ServerPlayer p) {
+        ServerLevel l = p.level();
+        for (var z : l.getEntitiesOfClass(Zombie.class, p.getBoundingBox().inflate(30))) z.discard();
+        Vec3 f = Fx.flatDir(p);
+        for (int i = 0; i < 3; i++) {
+            Zombie z = EntityTypes.ZOMBIE.create(l, EntitySpawnReason.COMMAND);
+            if (z == null) continue;
+            Vec3 at = p.position().add(f.scale(3 + i * 2)).add(new Vec3(-f.z, 0, f.x).scale(i - 1));
+            z.snapTo(at.x, at.y, at.z, p.getYRot() + 180, 0);
+            z.setNoAi(true);
+            z.setPersistenceRequired();
+            l.addFreshEntity(z);
+        }
+    }
+}

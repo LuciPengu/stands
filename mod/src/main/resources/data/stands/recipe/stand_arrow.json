@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["GG ", "SG ", "T  "],
+  "key": { "G": "minecraft:gold_ingot", "S": "minecraft:soul_sand", "T": "minecraft:stick" },
+  "result": { "id": "stands:stand_arrow", "count": 1 }
+}

@@ -1,0 +1,353 @@
+{
+  "ora": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:oraoraora_jotaro",
+        "stream": false
+      }
+    ]
+  },
+  "geractivation": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:ger",
+        "stream": false
+      }
+    ]
+  },
+  "theworldrush": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:mudamudamuda_dio",
+        "stream": false
+      }
+    ]
+  },
+  "killerqueenremotedetonation": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:trigger_bites_the_dust",
+        "stream": false
+      }
+    ]
+  },
+  "goldenexperiencelifegiver": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:life_sfx",
+        "stream": false
+      }
+    ]
+  },
+  "timestop": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:timestop",
+        "stream": false
+      }
+    ]
+  },
+  "bitesthedusttimereverse": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:bites_the_dust_9",
+        "stream": false
+      }
+    ]
+  },
+  "conscious_time_erasure": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:conscious_time_erasure",
+        "stream": false
+      }
+    ]
+  },
+  "quicktimeerase": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:quick_time_erasure",
+        "stream": false
+      }
+    ]
+  },
+  "crimsonjab": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:kingcrimsonpunches",
+        "stream": false
+      }
+    ]
+  },
+  "gunsfx": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:emperor_3",
+        "stream": false
+      }
+    ]
+  },
+  "emperorgunsfx": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:emperoratk",
+        "stream": false
+      }
+    ]
+  },
+  "handerase": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:the_hand_erase",
+        "stream": false
+      }
+    ]
+  },
+  "handteleport": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:thehandteleport",
+        "stream": false
+      }
+    ]
+  },
+  "emeraldsplash": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:shortemeraldsplash",
+        "stream": false
+      }
+    ]
+  },
+  "webplacement": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:webplacement",
+        "stream": false
+      }
+    ]
+  },
+  "chariotslash": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:silverchariotslash",
+        "stream": false
+      }
+    ]
+  },
+  "ari": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:zipperattack",
+        "stream": false
+      }
+    ]
+  },
+  "zipperplace": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:stickyfingersplacezipper",
+        "stream": false
+      }
+    ]
+  },
+  "zipperzip": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:zipperzip",
+        "stream": false
+      }
+    ]
+  },
+  "areosmithminigun": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:aerosmithminigun",
+        "stream": false
+      }
+    ]
+  },
+  "aerosmithsonar": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:sonar_sfx",
+        "stream": false
+      }
+    ]
+  },
+  "aerosmith_idle": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:aerosmith_idle",
+        "stream": false
+      }
+    ]
+  },
+  "aerosmithidle": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:aerosmith_idle",
+        "stream": false
+      }
+    ]
+  },
+  "roadroller": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:roadrollersfx",
+        "stream": false
+      }
+    ]
+  },
+  "tuskrush": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:uskra",
+        "stream": false
+      }
+    ]
+  },
+  "tuskora": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:uskra",
+        "stream": false
+      }
+    ]
+  },
+  "dojyann": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:ojyan",
+        "stream": false
+      }
+    ]
+  },
+  "torturedance": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "jojo:ziyoziyogiyangudansu_ang_orture_ance",
+        "stream": true
+      }
+    ]
+  },
+  "goldexperiencerush": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:mudamudamuda_giorno",
+        "stream": false
+      }
+    ]
+  },
+  "unsummonstand": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:standunsummon",
+        "stream": false
+      }
+    ]
+  },
+  "summonstand": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:standsummon",
+        "stream": false
+      }
+    ]
+  },
+  "starplatrush": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:oraoraora_jotaro",
+        "stream": false
+      }
+    ]
+  },
+  "crazydiamonddora": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:crazyiamondora",
+        "stream": false
+      }
+    ]
+  },
+  "reverse": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:crazy_diamond_3_2",
+        "stream": false
+      }
+    ]
+  },
+  "viruspunch": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:urplehazeviruspunch",
+        "stream": false
+      }
+    ]
+  },
+  "rage": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:purplehazerage",
+        "stream": false
+      }
+    ]
+  },
+  "ultimatevirus": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:purplehazeuptimatevirus",
+        "stream": false
+      }
+    ]
+  },
+  "echoeseffect": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "jojo:echoessoundeffect",
+        "stream": false
+      }
+    ]
+  }
+}

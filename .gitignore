@@ -9,3 +9,7 @@ plugin/build/
 plugin/.gradle/
 release/
 .DS_Store
+tools/jdk/
+mod/build/
+mod/.gradle/
+mod/run/

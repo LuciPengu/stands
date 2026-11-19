@@ -45,8 +45,15 @@ Get a stand by crafting a Stand Arrow (gold, gold / soul sand, gold / stick) and
 
 Every damage number, cooldown and XP value is in `config.yml`.
 
+## Fabric mod (Stands 2.0)
+
+`mod/` is the same stands as a Fabric mod for Minecraft 26.3, for players who'd rather install a mod than join a plugin server. It needs Fabric API and GeckoLib 5.5.7+, and both the server and every player need it. Keys: M summon, N basic, J skill, K skill 2, B ultimate (rebindable). Balance numbers live in `config/stands.json`.
+
 ## Building
 
-`cd plugin && gradle build` (Java 25). `tools/` has the scripts that converted the original mod's models and added the animations.
+- Plugin: `cd plugin && gradle build` (Java 25).
+- Mod: `cd mod && ./gradlew build` (Java 25). The jar is in `mod/build/libs/`.
+
+`tools/` has the scripts that converted the original mod's models and added the animations. `tools/bbmodel2geo.py` turns the `.bbmodel` files into the mod's GeckoLib models, animations and skins.
 
 Fan project. Not affiliated with or endorsed by the owners of JoJo's Bizarre Adventure.

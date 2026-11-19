@@ -1,0 +1,707 @@
+{
+  "enabled-stands": [
+    "theworld",
+    "starplatinum",
+    "crazydiamond",
+    "stickyfingers",
+    "kingcrimson",
+    "silverchariot",
+    "magiciansred",
+    "heirophantgreen",
+    "aerosmith",
+    "tuskact4",
+    "theemperor",
+    "weatherreport",
+    "killerqueen",
+    "thehand",
+    "purplehaze",
+    "echoesact3",
+    "metallica",
+    "hermitpurple",
+    "anubis",
+    "goldenexperience",
+    "d4c"
+  ],
+  "arrow": {
+    "fail-chance": 0.1,
+    "fail-damage": 30.0,
+    "craftable": true
+  },
+  "levels": {
+    "level-2-xp": 300,
+    "level-3-xp": 1000,
+    "level-2-cost": 30,
+    "level-3-cost": 60
+  },
+  "xp": {
+    "per-damage-vs-mobs": 1.0,
+    "per-damage-vs-players": 3.0,
+    "mob-kill": 8,
+    "player-kill": 60,
+    "duel-win": 150,
+    "duel-loss": 30
+  },
+  "pvp": {
+    "default-on": false,
+    "duel-countdown": 5,
+    "duel-time-limit": 180
+  },
+  "world-edits": "temporary",
+  "power": {
+    "vs-stand-users": 1.0,
+    "vs-players-without-stand": 3.0,
+    "vs-mobs": 4.0,
+    "cooldown-multiplier": 0.7
+  },
+  "sounds": {
+    "volume": 3.0,
+    "summon": "jojo:summonstand",
+    "unsummon": "jojo:unsummonstand",
+    "timestop": "jojo:timestop",
+    "theworld-rush": "jojo:theworldrush",
+    "roadroller": "jojo:roadroller",
+    "ora": "jojo:ora",
+    "starplatinum-rush": "jojo:starplatrush",
+    "crazydiamond-rush": "jojo:crazydiamonddora",
+    "reverse": "jojo:reverse",
+    "ari": "jojo:ari",
+    "zipper-place": "jojo:zipperplace",
+    "zipper-zip": "jojo:zipperzip",
+    "crimson-jab": "jojo:crimsonjab",
+    "time-skip": "jojo:quicktimeerase",
+    "time-erase": "jojo:conscious_time_erasure",
+    "chariot-slash": "jojo:chariotslash",
+    "armor-off": "minecraft:block.anvil.use",
+    "fire": "minecraft:entity.blaze.shoot",
+    "emerald-splash": "jojo:emeraldsplash",
+    "web": "jojo:webplacement",
+    "minigun": "jojo:areosmithminigun",
+    "sonar": "jojo:aerosmithsonar",
+    "bomb": "jojo:killerqueenremotedetonation",
+    "tusk": "jojo:tuskora",
+    "gun": "jojo:emperorgunsfx",
+    "detonate": "jojo:killerqueenremotedetonation",
+    "bites-the-dust": "jojo:bitesthedusttimereverse",
+    "hand-erase": "jojo:handerase",
+    "hand-teleport": "jojo:handteleport",
+    "virus-punch": "jojo:viruspunch",
+    "rage": "jojo:rage",
+    "ultimate-virus": "jojo:ultimatevirus",
+    "echoes": "jojo:echoeseffect",
+    "ge-rush": "jojo:goldexperiencerush",
+    "life": "jojo:goldenexperiencelifegiver",
+    "ger": "jojo:geractivation",
+    "dojyaan": "jojo:dojyann"
+  },
+  "time-stop": {
+    "radius": 30,
+    "stored-damage-cap": 16.0,
+    "counter-after": 1.0
+  },
+  "stands": {
+    "theworld": {
+      "name": "The World",
+      "model": "theworld",
+      "basic": {
+        "cooldown": 4,
+        "damage-total": 9.0,
+        "hits": 8,
+        "range": 4.0,
+        "finisher-knockback": 1.6
+      },
+      "skill": {
+        "cooldown": 12,
+        "knives": 5,
+        "damage-per-knife": 4.0
+      },
+      "skill2": {
+        "cooldown": 10,
+        "distance": 5,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "duration": 5.0,
+        "level": 3
+      },
+      "roadroller": {
+        "cooldown": 120,
+        "damage": 14.0,
+        "radius": 4.5
+      }
+    },
+    "starplatinum": {
+      "name": "Star Platinum",
+      "model": "starplatinum",
+      "basic": {
+        "cooldown": 4,
+        "damage-total": 10.5,
+        "hits": 8,
+        "range": 4.0,
+        "finisher-knockback": 1.8
+      },
+      "skill": {
+        "cooldown": 8,
+        "damage": 6.0,
+        "range": 7
+      },
+      "skill2": {
+        "cooldown": 10,
+        "damage": 5.0,
+        "knockback": 1.4,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "duration": 3.5,
+        "level": 3
+      }
+    },
+    "crazydiamond": {
+      "name": "Crazy Diamond",
+      "model": "crazydiamond",
+      "basic": {
+        "cooldown": 4,
+        "damage-total": 9.5,
+        "hits": 8,
+        "range": 4.0,
+        "finisher-knockback": 1.6
+      },
+      "skill": {
+        "cooldown": 20,
+        "instant-heal": 3.0,
+        "regen-seconds": 3
+      },
+      "skill2": {
+        "cooldown": 30,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "heal": 12.0,
+        "radius": 6,
+        "level": 3
+      }
+    },
+    "stickyfingers": {
+      "name": "Sticky Fingers",
+      "model": "stickyfingers",
+      "basic": {
+        "cooldown": 4,
+        "damage-total": 9.0,
+        "hits": 8,
+        "range": 4.0,
+        "finisher-knockback": 1.6
+      },
+      "skill": {
+        "cooldown": 10,
+        "distance": 7
+      },
+      "skill2": {
+        "cooldown": 15,
+        "damage": 6.0,
+        "slow-seconds": 2,
+        "range": 8,
+        "lifetime": 12,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "duration": 3,
+        "heal": 6.0,
+        "level": 3
+      }
+    },
+    "kingcrimson": {
+      "name": "King Crimson",
+      "model": "kingcrimson",
+      "basic": {
+        "cooldown": 4,
+        "damage-total": 8.5,
+        "hits": 7,
+        "range": 4.0,
+        "finisher-knockback": 1.4
+      },
+      "skill": {
+        "cooldown": 12,
+        "damage": 10.0,
+        "range": 3.5,
+        "knockback": 1.2,
+        "windup": 0.4
+      },
+      "skill2": {
+        "cooldown": 10,
+        "distance": 9,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 70,
+        "duration": 4,
+        "epitaph-bonus": 6.0,
+        "radius": 20,
+        "level": 3
+      }
+    },
+    "silverchariot": {
+      "name": "Silver Chariot",
+      "model": "silverchariot",
+      "basic": {
+        "cooldown": 3,
+        "damage": 6.0,
+        "range": 3.5,
+        "distance": 4
+      },
+      "skill": {
+        "cooldown": 6,
+        "damage-total": 8.0,
+        "hits": 6,
+        "range": 4.5,
+        "finisher-knockback": 1.0
+      },
+      "skill2": {
+        "cooldown": 14,
+        "damage": 8.0,
+        "knockback": 1.0,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 60,
+        "duration": 8,
+        "damage-taken-multiplier": 1.2,
+        "level": 3
+      }
+    },
+    "magiciansred": {
+      "name": "Magician's Red",
+      "model": "magiciansred",
+      "basic": {
+        "cooldown": 3,
+        "damage": 5.0,
+        "burn-seconds": 3
+      },
+      "skill": {
+        "cooldown": 12,
+        "damage-per-tick": 1.5,
+        "radius": 2.5,
+        "duration": 4,
+        "range": 7
+      },
+      "skill2": {
+        "cooldown": 20,
+        "duration": 6,
+        "next-hit-bonus": 4.0,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "fireballs": 5,
+        "damage": 4.0,
+        "level": 3
+      }
+    },
+    "heirophantgreen": {
+      "name": "Hierophant Green",
+      "model": "heirophantgreen",
+      "basic": {
+        "cooldown": 5,
+        "emeralds": 4,
+        "damage-per-emerald": 2.0
+      },
+      "skill": {
+        "cooldown": 14,
+        "duration": 5
+      },
+      "skill2": {
+        "cooldown": 16,
+        "damage": 2.0,
+        "root-seconds": 1.5,
+        "range": 12,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "waves": 2,
+        "emeralds-per-wave": 8,
+        "damage-per-emerald": 2.0,
+        "level": 3
+      }
+    },
+    "aerosmith": {
+      "name": "Aerosmith",
+      "model": "aerosmith",
+      "basic": {
+        "cooldown": 5,
+        "shots": 8,
+        "damage-per-shot": 1.0
+      },
+      "skill": {
+        "cooldown": 12,
+        "damage": 7.0,
+        "radius": 3
+      },
+      "skill2": {
+        "cooldown": 25,
+        "radius": 30,
+        "duration": 6,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "blasts": 8,
+        "damage-per-blast": 3.0,
+        "level": 3
+      }
+    },
+    "tuskact4": {
+      "name": "Tusk Act 4",
+      "model": "tuskact4",
+      "basic": {
+        "cooldown": 2.5,
+        "damage": 4.0
+      },
+      "skill": {
+        "cooldown": 12,
+        "nails": 5,
+        "damage-per-nail": 3.0
+      },
+      "skill2": {
+        "cooldown": 15,
+        "damage": 7.0,
+        "spin-seconds": 2,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 100,
+        "damage": 4.0,
+        "duration": 6,
+        "damage-per-second": 1.5,
+        "level": 3
+      }
+    },
+    "theemperor": {
+      "name": "The Emperor",
+      "basic": {
+        "cooldown": 1.2,
+        "damage": 4.0,
+        "range": 40
+      },
+      "skill": {
+        "cooldown": 6,
+        "damage": 6.0,
+        "homing-range": 8
+      },
+      "skill2": {
+        "cooldown": 8,
+        "distance": 6,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "shots": 6,
+        "damage-per-shot": 3.0,
+        "range": 40,
+        "level": 3
+      }
+    },
+    "weatherreport": {
+      "name": "Weather Report",
+      "model": "weatherreport",
+      "basic": {
+        "cooldown": 6,
+        "damage": 5.0,
+        "range": 20,
+        "radius": 2
+      },
+      "skill": {
+        "cooldown": 15,
+        "duration": 5
+      },
+      "skill2": {
+        "cooldown": 10,
+        "damage": 2.0,
+        "knockback": 1.8,
+        "range": 7,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 80,
+        "damage": 4.0,
+        "radius": 10,
+        "duration": 4,
+        "level": 3
+      }
+    },
+    "killerqueen": {
+      "name": "Killer Queen",
+      "model": "killerqueen",
+      "basic": {
+        "cooldown": 2.5,
+        "damage": 6.0,
+        "range": 3.5
+      },
+      "skill": {
+        "cooldown": 10,
+        "damage": 8.0,
+        "radius": 3,
+        "plant-range": 5,
+        "fuse-seconds": 20
+      },
+      "skill2": {
+        "cooldown": 20,
+        "damage": 6.0,
+        "radius": 2.5,
+        "homing-range": 12,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 180,
+        "health-threshold": 8.0,
+        "heal-to": 14.0,
+        "level": 3
+      }
+    },
+    "thehand": {
+      "name": "The Hand",
+      "model": "thehand",
+      "basic": {
+        "cooldown": 2.5,
+        "damage": 6.0,
+        "range": 3.5
+      },
+      "skill": {
+        "cooldown": 10,
+        "range": 10,
+        "self-distance": 5
+      },
+      "skill2": {
+        "cooldown": 8,
+        "range": 5,
+        "restore-seconds": 5,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 80,
+        "damage": 12.0,
+        "range": 4,
+        "windup": 0.5,
+        "level": 3
+      }
+    },
+    "purplehaze": {
+      "name": "Purple Haze",
+      "model": "purplehaze",
+      "basic": {
+        "cooldown": 5,
+        "damage": 5.0,
+        "range": 3.5,
+        "poison-seconds": 4,
+        "rage-cooldown": 1
+      },
+      "skill": {
+        "cooldown": 45,
+        "duration": 8
+      },
+      "skill2": {
+        "cooldown": 18,
+        "radius": 3,
+        "cloud-seconds": 4,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 90,
+        "damage": 4.0,
+        "radius": 5,
+        "duration": 5,
+        "self-wither-seconds": 3,
+        "level": 3
+      }
+    },
+    "echoesact3": {
+      "name": "Echoes Act 3",
+      "model": "echoesact3",
+      "basic": {
+        "cooldown": 2.5,
+        "damage": 5.0,
+        "range": 3.5
+      },
+      "skill": {
+        "cooldown": 6,
+        "damage": 3.0,
+        "burn-seconds": 4,
+        "range": 8
+      },
+      "skill2": {
+        "cooldown": 8,
+        "damage": 2.0,
+        "knockback": 1.5,
+        "range": 6,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 60,
+        "damage": 4.0,
+        "duration": 3,
+        "range": 10,
+        "level": 3
+      }
+    },
+    "metallica": {
+      "name": "Metallica",
+      "basic": {
+        "cooldown": 4,
+        "damage": 5.0,
+        "range": 6
+      },
+      "skill": {
+        "cooldown": 15,
+        "damage-per-second": 1.0,
+        "seconds": 5,
+        "range": 8
+      },
+      "skill2": {
+        "cooldown": 20,
+        "damage": 2.0,
+        "range": 10,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 60,
+        "duration": 5,
+        "level": 3
+      }
+    },
+    "hermitpurple": {
+      "name": "Hermit Purple",
+      "basic": {
+        "cooldown": 3,
+        "damage": 6.0,
+        "range": 5
+      },
+      "skill": {
+        "cooldown": 10,
+        "range": 14,
+        "speed": 1.5
+      },
+      "skill2": {
+        "cooldown": 14,
+        "damage": 3.0,
+        "root-seconds": 2,
+        "range": 8,
+        "lifetime": 12,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 75,
+        "heal": 4.0,
+        "duration": 8,
+        "level": 3
+      }
+    },
+    "anubis": {
+      "name": "Anubis",
+      "basic": {
+        "cooldown": 1.5,
+        "damage": 5.0,
+        "range": 3.5,
+        "damage-per-stack": 1.0,
+        "max-stacks": 4
+      },
+      "skill": {
+        "cooldown": 15,
+        "duration": 5
+      },
+      "skill2": {
+        "cooldown": 8,
+        "damage": 5.0,
+        "distance": 5,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 60,
+        "damage": 9.0,
+        "distance": 8,
+        "level": 3
+      }
+    },
+    "goldenexperience": {
+      "name": "Gold Experience",
+      "model": "goldenexperience",
+      "basic": {
+        "cooldown": 4,
+        "damage-total": 8.0,
+        "hits": 8,
+        "range": 4.0,
+        "finisher-knockback": 1.4
+      },
+      "skill": {
+        "cooldown": 15,
+        "lifetime": 8
+      },
+      "skill2": {
+        "cooldown": 20,
+        "duration": 6,
+        "next-hit-bonus": 3.0,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 60,
+        "radius": 40,
+        "duration": 8,
+        "level": 3
+      }
+    },
+    "ger": {
+      "name": "Gold Experience Requiem",
+      "model": "ger",
+      "basic": {
+        "cooldown": 4,
+        "damage-total": 10.0,
+        "hits": 8,
+        "range": 4.0,
+        "finisher-knockback": 1.6
+      },
+      "skill": {
+        "cooldown": 12,
+        "lifetime": 10
+      },
+      "skill2": {
+        "cooldown": 18,
+        "duration": 6,
+        "next-hit-bonus": 4.0,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 120,
+        "window": 5,
+        "heal": 6.0,
+        "reflect-damage": 8.0,
+        "level": 3
+      }
+    },
+    "d4c": {
+      "name": "D4C",
+      "model": "d4c",
+      "basic": {
+        "cooldown": 2.5,
+        "damage": 6.0,
+        "range": 3.5
+      },
+      "skill": {
+        "cooldown": 20,
+        "distance": 8,
+        "duration": 1.5
+      },
+      "skill2": {
+        "cooldown": 25,
+        "duration": 6,
+        "level": 2
+      },
+      "ultimate": {
+        "cooldown": 100,
+        "duration": 5,
+        "damage-taken-multiplier": 0.5,
+        "level": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "item.stands.stand_arrow": "Stand Arrow",
+  "item.stands.knife": "Knife",
+  "item.stands.emerald": "Emerald",
+  "item.stands.nail": "Nail",
+  "item.stands.swordtip": "Sword Tip",
+  "entity.stands.stand": "Stand",
+  "entity.stands.shot": "Stand Projectile",
+  "key.category.stands.stands": "Stands",
+  "key.stands.summon": "Summon / unsummon stand",
+  "key.stands.basic": "Stand: basic attack",
+  "key.stands.skill": "Stand: skill",
+  "key.stands.skill2": "Stand: skill 2 (level 2)",
+  "key.stands.ultimate": "Stand: ultimate (level 3)",
+  "death.attack.stand": "%1$s was defeated by a stand",
+  "death.attack.stand.player": "%1$s was defeated by %2$s's stand"
+}
